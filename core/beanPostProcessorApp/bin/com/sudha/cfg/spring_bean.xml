@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="emp" class="com.sudha.Employee">
+		<property name="eid" value="E-4444" />
+		<property name="ename" value="Jack" />
+		<property name="esal" value="25000" />
+		<property name="eaddr" value="BLR" />
+		<property name="acc">
+			<bean id="account" class="com.sudha.Account">
+				<property name="accno" value="12345678" />
+				<property name="accName" value="Jack" />
+				<property name="accType" value="Savings" />
+				<property name="balance" value="30000" />
+			</bean>
+		</property>
+	</bean>
+</beans>

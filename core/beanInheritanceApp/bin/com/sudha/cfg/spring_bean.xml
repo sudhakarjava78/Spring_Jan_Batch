@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	
+	<bean id="hello" class="com.sudha.HelloBean" init-method="init" destroy-method="destroy">
+		<property name="message" value="This is Spring application" />
+		<property name="name" value="Jack" />
+	</bean> 
+	
+	<bean id="welcome" class="com.sudha.WelcomeBean" parent="hello">
+		<property name="message" value="Welcome to Spring Course"/>
+	</bean>
+	
+	<bean id="wish" class="com.sudha.WishBean" parent="welcome">
+		<property name="message" value="All the Best"/>
+	</bean>
+</beans>
